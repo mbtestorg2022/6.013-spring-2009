@@ -12,66 +12,867 @@ TM = transverse magnetic
 TEM = transverse electromagnetic  
 VSWR = voltage standing wave ratio
 
-| SES # | TOPICS | DEMOS | KEY DATES |
-| --- | --- | --- | --- |
-| {{< td-colspan 4 >}}**Foundations**{{< /td-colspan >}} ||||
-| L1 | Foundations, forces and fields, Gauss's and Ampere's laws (∫) for static fields | Balloons | Problem set 1 out |
-| R1 | Vectors, •, ×, static field integral-solution examples: find E(r) for sphere, cylinder; Φ(r); H(r) for wire | &nbsp; |
-| L2 | Media, boundary conditions | Boomer | &nbsp; |
-| R2 | Resistors, capacitors, devices as circuits, E relaxation τ = RC = ε/σ; if time, coaxial R | &nbsp; |
-| L3 | Review vector operators; Maxwell's differential equations (t), E, H, uniform plane wave; sin (ωt) | UPW movie | Problem set 2 out |
-| R3 | Complex Maxwell's equation, sinusoidal UPW, wave polarization | Slinky | &nbsp; |
-| L4 | Poynting theorem derivation (time), UPW example (we, wm, S(t)) | Helmholtz | &nbsp; |
-| R4 | Inductors, solenoidal; τ = L/R; vector operators; planar, cylindrical, spherical examples | &nbsp; |
-| R5 | Show we = CV2/2, wm = LI2/2; toroidal inductors, inductors with gaps, transformers | &nbsp; | Problem set 3 out |
-| {{< td-colspan 4 >}}**Forces, motors, generators, and MEMS**{{< /td-colspan >}} ||||
-| L5 | Electric forces on e-beams, C plates, force from ∂w/∂z; generators and sensors | &nbsp; |
-| R6 | Magnetic forces: electron optics, motors and generators | &nbsp; |
-| L6 | Magnetic pressure, rotary wire and reluctance motors, forces on materials | Motor | Problem set 4 out |
-| R7 | Wave forces; E and H field relaxation; examples from L5-R7 | &nbsp; |
-| L7 | Static Φ and fields, Laplace's equation, separation of variables (x,y,z); inhomogeneous materials | Scooter | &nbsp; |
-| R8 | Review: complex differential Maxwell's equations (ω); UPW, polarization | &nbsp; |
-| {{< td-colspan 4 >}}**Waves in media and at boundaries**{{< /td-colspan >}} ||||
-| L8 | Electromagnetic fields in media, uniaxial media, quarter-wave plate | Stressed media | Problem set 5 out |
-| R9 | Lossy media, skin depth, plasmas; fields, power, and energy | Wave movie | &nbsp; |
-| L9 | Boundary conditions, k•r, phase matching, non-uniform plane wave, Snell's law | Prism | &nbsp; |
-| R10 | Review for quiz 1 | &nbsp; |
-| &nbsp; | Quiz 1 | &nbsp; |
-| R11 | Boundary conditions, σ = ∞, perpendicular reflection from ε and σ = ∞; examples at angles | &nbsp; |
-| L10 | TE at planar boundary, TM by duality, Brewster's angle | Brewster's angle | &nbsp; |
-| R12 | Derive vp, vg for 2 sines, plasma example, power and energy examples | Dispersion video | &nbsp; |
-| {{< td-colspan 4 >}}**Limits to computation speed**{{< /td-colspan >}} ||||
-| L11 | Device and line delays; TEM parallel-plate line, telegraphers' equation, Zo | Fluorescent | Problem set 6 out |
-| R13 | TEM transients, graphical solution | &nbsp; |
-| L12 | Transients: Thevenin equivalents; L, C, diode loads; initial conditions; lossy TEM | Transient movies | &nbsp; |
-| R14 | Examples of transients: loads, initial conditions, analytic expressions | &nbsp; |
-| {{< td-colspan 4 >}}**RF/microwave guidance and filtering**{{< /td-colspan >}} ||||
-| L13 | Architecture, generalized TEM line, Ζ(z), Γ(z), Ζ transformations | VSWR, slotted | Problem set 7 out |
-| R15 | Gamma plane, Smith chart, VSWR | &nbsp; |
-| L14 | RLC resonators, series, parallel, ωo, ∆ω, α, QL, QI, QE, coupling | &nbsp; |
-| R16 | Smith chart, single-stub tuning, Yn(z), λ/4 transformer | &nbsp; |
-| L15 | TEM resonators, we(t), wm(t), Q, ∆ω, examples; &#124;V(z,f)&#124; | Coupled resonator video | Problem set 8 out |
-| R17 | TE, TM parallel plate waveguide, kx, ky, **E**, **H**, vg, vp, cutoff, evanescence; waveguide movies | &nbsp; |
-| L16 | TEmn rectangular waveguide, cavity resonators, perturbations | Cavity resonator perturbation | &nbsp; |
-| R18 | TM waveguides, field sketches, Poynting vector; examples from L16 | &nbsp; |
-| {{< td-colspan 4 >}}**Wireless communications**{{< /td-colspan >}} ||||
-| L17 | Conservation of energy, power, G(θ,φ), Ae\= Gλ2/4π, Rr, VTh, RF links | &nbsp; | Problem set 9 out |
-| R19 | Review for quiz 2 | &nbsp; |
-| &nbsp; | Quiz 2 | &nbsp; |
-| R20 | RF link examples, bit rates, radar applications | &nbsp; |
-| R21 | Radiation by charges ρ, current **J**; Φ and Ā; static, dynamic (t) | &nbsp; | Problem set 10 out |
-| L18 | Radiation by current elements, Hertzian dipole, near and far fields; Biot-Savart | Dipole video | &nbsp; |
-| R22 | Wire antennas, wire arrays | &nbsp; |
-| L19 | Receiving antennas: VTh in dipoles and loops; d<<λ/2π, G = 4πA/λ2 | Yagi antenna | Problem set 11 out |
-| R23 | Mirrors, 2-dipole arrays with mirrors, ground reflections, propagation, thermal noise | &nbsp; |
-| L20 | Aperture antennas, diffraction | Laser diffraction | &nbsp; |
-| R24 | Link and antenna examples, phasor addition, radio astronomy, remote sensing | &nbsp; |
-| {{< td-colspan 4 >}}**Optical communications**{{< /td-colspan >}} ||||
-| L21 | Optical fibers, applications, dielectric slab waveguide, fiber design | μW fiber | Problem set 12 out |
-| R25 | Waveguide dispersion (vg and vp in fiber waveguides), optical link examples | &nbsp; |
-| L22 | Lasers | Simulated 3-level laser | &nbsp; |
-| R26 | Optical resonators, filters, multiplexers, interferometer/modulators, detectors | &nbsp; |
-| {{< td-colspan 4 >}}**Acoustics**{{< /td-colspan >}} ||||
-| L23 | Acoustic waves, boundary conditions, reflections, antennas | p, u(x,z,t) movie; keys | &nbsp; |
-| R27 | Acoustic waveguides and resonators, resonator coupling | &nbsp; |
-| L24 | Course philosophy, resonator perturbations and speech generation | Acoustic resonator |
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+SES #
+{{< thclose >}}
+{{< thopen >}}
+TOPICS
+{{< thclose >}}
+{{< thopen >}}
+DEMOS
+{{< thclose >}}
+{{< thopen >}}
+KEY DATES
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Foundations**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L1
+{{< tdclose >}}
+{{< tdopen >}}
+Foundations, forces and fields, Gauss's and Ampere's laws (∫) for static fields
+{{< tdclose >}}
+{{< tdopen >}}
+Balloons
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 1 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R1
+{{< tdclose >}}
+{{< tdopen >}}
+Vectors, •, ×, static field integral-solution examples: find E(r) for sphere, cylinder; Φ(r); H(r) for wire
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L2
+{{< tdclose >}}
+{{< tdopen >}}
+Media, boundary conditions
+{{< tdclose >}}
+{{< tdopen >}}
+Boomer
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R2
+{{< tdclose >}}
+{{< tdopen >}}
+Resistors, capacitors, devices as circuits, E relaxation τ = RC = ε/σ; if time, coaxial R
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L3
+{{< tdclose >}}
+{{< tdopen >}}
+Review vector operators; Maxwell's differential equations (t), E, H, uniform plane wave; sin (ωt)
+{{< tdclose >}}
+{{< tdopen >}}
+UPW movie
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 2 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R3
+{{< tdclose >}}
+{{< tdopen >}}
+Complex Maxwell's equation, sinusoidal UPW, wave polarization
+{{< tdclose >}}
+{{< tdopen >}}
+Slinky
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L4
+{{< tdclose >}}
+{{< tdopen >}}
+Poynting theorem derivation (time), UPW example (we, wm, S(t))
+{{< tdclose >}}
+{{< tdopen >}}
+Helmholtz
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R4
+{{< tdclose >}}
+{{< tdopen >}}
+Inductors, solenoidal; τ = L/R; vector operators; planar, cylindrical, spherical examples
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R5
+{{< tdclose >}}
+{{< tdopen >}}
+Show we = CV2/2, wm = LI2/2; toroidal inductors, inductors with gaps, transformers
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 3 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Forces, motors, generators, and MEMS**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L5
+{{< tdclose >}}
+{{< tdopen >}}
+Electric forces on e-beams, C plates, force from ∂w/∂z; generators and sensors
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R6
+{{< tdclose >}}
+{{< tdopen >}}
+Magnetic forces: electron optics, motors and generators
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L6
+{{< tdclose >}}
+{{< tdopen >}}
+Magnetic pressure, rotary wire and reluctance motors, forces on materials
+{{< tdclose >}}
+{{< tdopen >}}
+Motor
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 4 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R7
+{{< tdclose >}}
+{{< tdopen >}}
+Wave forces; E and H field relaxation; examples from L5-R7
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L7
+{{< tdclose >}}
+{{< tdopen >}}
+Static Φ and fields, Laplace's equation, separation of variables (x,y,z); inhomogeneous materials
+{{< tdclose >}}
+{{< tdopen >}}
+Scooter
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R8
+{{< tdclose >}}
+{{< tdopen >}}
+Review: complex differential Maxwell's equations (ω); UPW, polarization
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Waves in media and at boundaries**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L8
+{{< tdclose >}}
+{{< tdopen >}}
+Electromagnetic fields in media, uniaxial media, quarter-wave plate
+{{< tdclose >}}
+{{< tdopen >}}
+Stressed media
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 5 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R9
+{{< tdclose >}}
+{{< tdopen >}}
+Lossy media, skin depth, plasmas; fields, power, and energy
+{{< tdclose >}}
+{{< tdopen >}}
+Wave movie
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L9
+{{< tdclose >}}
+{{< tdopen >}}
+Boundary conditions, k•r, phase matching, non-uniform plane wave, Snell's law
+{{< tdclose >}}
+{{< tdopen >}}
+Prism
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R10
+{{< tdclose >}}
+{{< tdopen >}}
+Review for quiz 1
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+Quiz 1
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R11
+{{< tdclose >}}
+{{< tdopen >}}
+Boundary conditions, σ = ∞, perpendicular reflection from ε and σ = ∞; examples at angles
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L10
+{{< tdclose >}}
+{{< tdopen >}}
+TE at planar boundary, TM by duality, Brewster's angle
+{{< tdclose >}}
+{{< tdopen >}}
+Brewster's angle
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R12
+{{< tdclose >}}
+{{< tdopen >}}
+Derive vp, vg for 2 sines, plasma example, power and energy examples
+{{< tdclose >}}
+{{< tdopen >}}
+Dispersion video
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Limits to computation speed**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L11
+{{< tdclose >}}
+{{< tdopen >}}
+Device and line delays; TEM parallel-plate line, telegraphers' equation, Zo
+{{< tdclose >}}
+{{< tdopen >}}
+Fluorescent
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 6 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R13
+{{< tdclose >}}
+{{< tdopen >}}
+TEM transients, graphical solution
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L12
+{{< tdclose >}}
+{{< tdopen >}}
+Transients: Thevenin equivalents; L, C, diode loads; initial conditions; lossy TEM
+{{< tdclose >}}
+{{< tdopen >}}
+Transient movies
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R14
+{{< tdclose >}}
+{{< tdopen >}}
+Examples of transients: loads, initial conditions, analytic expressions
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**RF/microwave guidance and filtering**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L13
+{{< tdclose >}}
+{{< tdopen >}}
+Architecture, generalized TEM line, Ζ(z), Γ(z), Ζ transformations
+{{< tdclose >}}
+{{< tdopen >}}
+VSWR, slotted
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 7 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R15
+{{< tdclose >}}
+{{< tdopen >}}
+Gamma plane, Smith chart, VSWR
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L14
+{{< tdclose >}}
+{{< tdopen >}}
+RLC resonators, series, parallel, ωo, ∆ω, α, QL, QI, QE, coupling
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R16
+{{< tdclose >}}
+{{< tdopen >}}
+Smith chart, single-stub tuning, Yn(z), λ/4 transformer
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L15
+{{< tdclose >}}
+{{< tdopen >}}
+TEM resonators, we(t), wm(t), Q, ∆ω, examples; |V(z,f)|
+{{< tdclose >}}
+{{< tdopen >}}
+Coupled resonator video
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 8 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R17
+{{< tdclose >}}
+{{< tdopen >}}
+TE, TM parallel plate waveguide, kx, ky, **E**, **H**, vg, vp, cutoff, evanescence; waveguide movies
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L16
+{{< tdclose >}}
+{{< tdopen >}}
+TEmn rectangular waveguide, cavity resonators, perturbations
+{{< tdclose >}}
+{{< tdopen >}}
+Cavity resonator perturbation
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R18
+{{< tdclose >}}
+{{< tdopen >}}
+TM waveguides, field sketches, Poynting vector; examples from L16
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Wireless communications**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L17
+{{< tdclose >}}
+{{< tdopen >}}
+Conservation of energy, power, G(θ,φ), Ae\= Gλ2/4π, Rr, VTh, RF links
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 9 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R19
+{{< tdclose >}}
+{{< tdopen >}}
+Review for quiz 2
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+Quiz 2
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R20
+{{< tdclose >}}
+{{< tdopen >}}
+RF link examples, bit rates, radar applications
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R21
+{{< tdclose >}}
+{{< tdopen >}}
+Radiation by charges ρ, current **J**; Φ and Ā; static, dynamic (t)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 10 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L18
+{{< tdclose >}}
+{{< tdopen >}}
+Radiation by current elements, Hertzian dipole, near and far fields; Biot-Savart
+{{< tdclose >}}
+{{< tdopen >}}
+Dipole video
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R22
+{{< tdclose >}}
+{{< tdopen >}}
+Wire antennas, wire arrays
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L19
+{{< tdclose >}}
+{{< tdopen >}}
+Receiving antennas: VTh in dipoles and loops; d\<\<λ/2π, G = 4πA/λ2
+{{< tdclose >}}
+{{< tdopen >}}
+Yagi antenna
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 11 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R23
+{{< tdclose >}}
+{{< tdopen >}}
+Mirrors, 2-dipole arrays with mirrors, ground reflections, propagation, thermal noise
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L20
+{{< tdclose >}}
+{{< tdopen >}}
+Aperture antennas, diffraction
+{{< tdclose >}}
+{{< tdopen >}}
+Laser diffraction
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R24
+{{< tdclose >}}
+{{< tdopen >}}
+Link and antenna examples, phasor addition, radio astronomy, remote sensing
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Optical communications**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L21
+{{< tdclose >}}
+{{< tdopen >}}
+Optical fibers, applications, dielectric slab waveguide, fiber design
+{{< tdclose >}}
+{{< tdopen >}}
+μW fiber
+{{< tdclose >}}
+{{< tdopen >}}
+Problem set 12 out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R25
+{{< tdclose >}}
+{{< tdopen >}}
+Waveguide dispersion (vg and vp in fiber waveguides), optical link examples
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L22
+{{< tdclose >}}
+{{< tdopen >}}
+Lasers
+{{< tdclose >}}
+{{< tdopen >}}
+Simulated 3-level laser
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R26
+{{< tdclose >}}
+{{< tdopen >}}
+Optical resonators, filters, multiplexers, interferometer/modulators, detectors
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen colspan="4" >}}
+**Acoustics**
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L23
+{{< tdclose >}}
+{{< tdopen >}}
+Acoustic waves, boundary conditions, reflections, antennas
+{{< tdclose >}}
+{{< tdopen >}}
+p, u(x,z,t) movie; keys
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+R27
+{{< tdclose >}}
+{{< tdopen >}}
+Acoustic waveguides and resonators, resonator coupling
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+L24
+{{< tdclose >}}
+{{< tdopen >}}
+Course philosophy, resonator perturbations and speech generation
+{{< tdclose >}}
+{{< tdopen >}}
+Acoustic resonator
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
