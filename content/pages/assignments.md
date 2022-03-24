@@ -35,7 +35,7 @@ Problem set 1 ([PDF]({{< baseurl >}}/resources/mit6_013s09_pset01))
 Problem set 2 ([PDF]({{< baseurl >}}/resources/mit6_013s09_pset02))
 {{< tdclose >}}
 {{< tdopen >}}
-(![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF]({{< baseurl >}}/resources/mit6_013s09_sol_pset02))
+([PDF]({{< baseurl >}}/resources/mit6_013s09_sol_pset02))
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -80,7 +80,7 @@ Problem set 6 ([PDF]({{< baseurl >}}/resources/mit6_013s09_pset06))
 Problem set 7 ([PDF]({{< baseurl >}}/resources/mit6_013s09_pset07))
 {{< tdclose >}}
 {{< tdopen >}}
-(![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF - 2.8MB]({{< baseurl >}}/resources/mit6_013s09_sol_pset07))
+([PDF - 2.8MB]({{< baseurl >}}/resources/mit6_013s09_sol_pset07))
 {{< tdclose >}}
 
 {{< trclose >}}
